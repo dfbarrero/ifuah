@@ -1,0 +1,70 @@
+\documentclass[es,aut]{ifuah}
+
+
+\title{Manual de uso del paquete \textit{ifuah.cls}}
+\author{Daniel Rodr\'iguez and David F. Barrero}
+
+\begin{document}
+
+\ifuahprogram{Computer Science}
+\ifuahcourse{Operating Systems}
+\ifuahyear{} % Do not show year
+\ifuahlecturer{David F. Barrero}
+\ifuahtel{+34 91-885-69-20}
+\ifuahmail{} % Do not show email
+\date{} % Do not show date
+
+\maketitle
+
+\begin{abstract}
+Este paquete ofrece una plantilla para crear documentos sencillos en el contexto de asignaturas de la Escuela Polit\'ecnica Superior (EPS) de la Universidad de Alcal\'a (UAH). Es una adaptaci\'on del paquete \textit{iflatex}, de Borja Calvo (@b0rxa) adaptada a la imagen corporativa y estructura departamental de la EPS. 
+\end{abstract}
+
+\section{Opciones del paquete}
+El paquete cuenta con dos grupos de opciones. Por una parte tenemos la opci\'on de especificar el departamento de la EPS: \textit{cc} para Ciencias de la computaci\'on y \textit{aut} para Autom\'atica. Est\'a pendiente incorporar al resto de departamentos.
+
+Por otra parte, tambi\'en podemos especificar el idioma del documento, siendo las opciones euskara (eu), castellano (es) e ingl\'es (en). Esta opci\'on realiza algunos ajustes b\'asicos incluidos en el paquete \textit{babel}, adem\'as de cambios en puntos espec\'ificos de este paquete.
+
+\section{Lista de comandos}
+
+La lista de comandos del paquete es la siguiente:
+
+\begin{itemize}
+\item \begin{verbatim}\ifuahprogram{titulacion}\end{verbatim} Con este comando se especifica el nombre de la titulaci\'on en la que se imparte la asignatura.
+\item \begin{verbatim}\ifuahcourse{asignatura}\end{verbatim} Con este comando se especifica el nombre de la asignatura.
+\item \begin{verbatim}\ifuahlecturer{nombre del profesor}\end{verbatim} Con este comando podemos especificar el nombre del profesor para que aparezca en el pie de la primera p\'agina.
+\item \begin{verbatim}\ifuahyear{curso}\end{verbatim} Con este comando se especifica el curso acad\'emico (ejemplo, 2012/2013).
+\item \begin{verbatim}\ifuahtel{telefonoa}\end{verbatim} Con este comando se especifica el telefono que aparece al pie de la primera p\'agina.
+\item \begin{verbatim}\ifuahmail{email}\end{verbatim} Con este comando se especif\'ica el e-mail que aparece al pie de la primera p\'agina.
+\end{itemize}
+
+\section{Ejemplo de uso}
+
+He aqu\'i un ejemplo del uso del paquete
+
+\begin{verbatim}
+
+\documentclass[es,aut]{ifuah}
+
+
+\title{Manual de uso del paquete \textit{ifuah.cls}}
+\author{Daniel Rodr\'iguez and David F. Barrero}
+
+\begin{document}
+
+\ifuahprogram{Computer Science}
+\ifuahcourse{Operating Systems}
+\ifuahyear{} % Do not show year
+\ifuahlecturer{David F. Barrero}
+\ifuahtel{+34 91-885-69-20}
+\ifuahmail{} % Do not show email
+\date{} % Do not show date
+
+\maketitle
+
+\begin{abstract}
+...
+\end{abstract}
+
+\end{verbatim}
+\end{document}
